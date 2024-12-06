@@ -1,17 +1,66 @@
 
 body {
+    background-color: #FEF7DB;
    
 }
 
 header {
+    margin-top: 0px;
+    background-color: #474048;
+    text-align: center;
+    padding: 2rem;
+    
+    
 }
+
 
 main {
-          
+    font-family: 'Courier New', Courier, monospace;  
 }
 
+#leftContainer {
+    margin-right: 350px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+ 
+#logo img {    
+    width: 150px;
+    height: 150px;
+    
+  }
+
+#timer {
+    background-color: #C7962D;   
+}
+
+#newList, #overwhelmed {
+    background-color:#C7962D;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+} 
+
+#tasklist {
+    background-color: #F6988C;
+    position: absolute; /* tar bort från normalt flöde och låter dig placera vart som helst på sidan*/
+    left: 30%;
+    top: 50%;
+    bottom: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 20px; /*utrymme mellan innehåll och kant */
+}
 
 
 footer {
+    background-color: #474048;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 0px;
+    text-align: center;
+    position: fixed;
     
 }
