@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title></title>
-    <script src="style.js"></script>    
+    <title></title>       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     
 </head>
-<body>
-    <header>           
-          <!--<img id="header" src="\images\header.jpg" alt="Header">!-->
-          <h1>To Do</h1>
+<body>    
+    <header>
+          
     </header>   
     <main>
         <div id="leftContainer">
             <div id="logo">                
-                <img src="images\header.jpg" alt="logoBild">
+                <img src="images\sideimg.jpg" alt="logoBild">
             </div>
             <br>
             <label for="text">Search Task</label>
@@ -25,19 +24,34 @@
             <br>
             <br>
             <button id="newList">Add new list</button>
-            <div id="timer">
+            <div id="timerContainer">
                 <p>Timer</p>
+                <p id="timer">0</p>
+                <br>
+                <button id="startBtn">Start</button>
+                <button id="resetBtn">Reset</button>
+                <button id="stopBtn">Stop</button>
+                
             </div>
             <label for="overwhelmed">Feeling overwhelmed?</label>
             <button id="overwhelmed">Overwhelmed</button>
         </div>
-        <div id="tasklist">
-            <p>hej</p>
-        </div>                  
+        <div id="tasksContainer">
+            <div id="tasklist">
+                <h3>Current to do</h3>
+            </div>
+            <div id="deadlineList">
+                <h3>Deadline</h3>
+            </div> 
+            <div id="progress">
+                <h3>Progress</h3>
+            </div>
+        </div>                 
     </main>  
     <footer>
         <p>Footer</p>
     </footer>
+    <script src="style.js"></script>
     
 </body>
 </html>
