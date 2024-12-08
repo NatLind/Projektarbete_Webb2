@@ -4,56 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title></title>       
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-     
+    <title>My To Do</title>       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>     
 </head>
 <body>    
-    <header>
-          
-    </header>   
-    <main>
-        <div id="leftContainer">
-            <div id="logo">                
-                <img src="images\sideimg.jpg" alt="logoBild">
-            </div>
-            <br>
-            <label for="text">Search Task</label>
-            <input type="text">
-            <button id="search">Search</button>
-            <br>
-            <br>
-            <button id="newList">Add new list</button>
-            <div id="timerContainer">
-                <p>Timer</p>
-                <p id="timer">0</p>
+    <header></header>   
+    <main>       
+        <div class="container">            
+            <div id="leftContainer">
+                <div id="logo">                
+                    <img src="images/sideimg.jpg" alt="logoBild">
+                </div>
                 <br>
-                <button id="startBtn">Start</button>
-                <button id="resetBtn">Reset</button>
-                <button id="stopBtn">Stop</button>
-                
+                <label for="text">Search Task</label>
+                <input type="text">
+                <button id="search">Search</button>
+                <br>
+                <br>
+                <button id="newList">Add new list</button>
+                <div id="timerContainer">
+                    <p>Timer</p>
+                    <p id="timer">0</p>                
+                    <button id="startBtn">Start</button>
+                    <button id="resetBtn">Reset</button>
+                    <button id="stopBtn">Stop</button>                
+                </div>
+                <br>
+                <label for="overwhelmed">Feeling overwhelmed?</label>
+                <button id="overwhelmed">Randomize task</button>
             </div>
-            <label for="overwhelmed">Feeling overwhelmed?</label>
-            <button id="overwhelmed">Overwhelmed</button>
+            <div id="tasksContainer">
+                <div id="taskList" class="task-list">
+                    <button id="addTask">Add task</button>
+                    <h3>Current to do</h3>
+                    <ul class="task-items"></ul>                    
+                </div>
+            </div>
         </div>
-        <div id="tasksContainer">
-            <div id="tasklist">
-                <h3>Current to do</h3>
-            </div>
-            <div id="deadlineList">
-                <h3>Deadline</h3>
-            </div> 
-            <div id="progress">
-                <h3>Progress</h3>
-            </div>
-        </div>                 
     </main>  
     <footer>
         <p>Footer</p>
     </footer>
     <script src="style.js"></script>
-    
 </body>
 </html>
-
-
