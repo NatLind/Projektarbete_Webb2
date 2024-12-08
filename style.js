@@ -34,18 +34,24 @@ $(document).ready(function () {
         }
     });
 
-    // Skapa ny lista
-    $('#newList').click(function () {
+     // Skapa ny lista med anpassad rubrik, användaren väljer
+     $('#newList').click(function () {
+        let listTitle = prompt('Enter a title for your new list:');
+        if (!listTitle) {
+            listTitle = `Task List ${listCount}`; // Om inget anges, sätts en standardrubrik "Task List"
+        }
         listCount++;
         const newList = $(`
             <div class="task-list">
                 <button class="add-task-btn">Add task</button>
-                <h3>Task List ${listCount}</h3>
+                <button class="remove-task-list">Remove list</button>
+                <h3>${listTitle}</h3>
                 <ul class="task-items"></ul>
             </div>
         `);
         $('#tasksContainer').append(newList);
     });
+
 
     // Lägg till uppgifter i specifik lista
     $(document).on('click', '.add-task-btn', function () {
@@ -57,16 +63,24 @@ $(document).ready(function () {
         }
     });
 
-    // Markera uppgift som klar (stryka över)
+    // Markera uppgift som klar (stryker över den)
     $(document).on('click', '.task-item', function () {
         $(this).toggleClass('completed');
     });
 
-    // Radera uppgifter genom att dubbelklicka
+    // Radera uppgifter genom att dubbelklicka 
     $(document).on('dblclick', '.task-item', function () {
         const confirmDelete = confirm('Do you want to delete this task?');
         if (confirmDelete) {
             $(this).remove();
+        }
+    });
+
+    // Ta bort lista när "Remove list" knappen klickas på
+    $(document).on('click', '.remove-task-list', function () {
+        const confirmDeleteList = confirm('Do you want to delete this list?');
+        if (confirmDeleteList) {
+            $(this).closest('.task-list').remove();  // Ta bort hela listan (div:en)
         }
     });
 });

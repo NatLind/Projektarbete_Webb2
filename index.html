@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>My To Do</title>       
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">    
 </head>
 <body>    
     <header></header>   
@@ -15,13 +16,10 @@
                 <div id="logo">                
                     <img src="images/sideimg.jpg" alt="logoBild">
                 </div>
-                <br>
-                <label for="text">Search Task</label>
-                <input type="text">
-                <button id="search">Search</button>
-                <br>
-                <br>
+                <br>                
                 <button id="newList">Add new list</button>
+                <br>
+                <br> 
                 <div id="timerContainer">
                     <p>Timer</p>
                     <p id="timer">0</p>                
@@ -36,14 +34,17 @@
             <div id="tasksContainer">
                 <div id="taskList" class="task-list">
                     <button id="addTask">Add task</button>
+                    <button class="remove-task-list">Remove list</button>
                     <h3>Current to do</h3>
-                    <ul class="task-items"></ul>                    
+                    <ul class="task-items"></ul>                                       
                 </div>
             </div>
         </div>
     </main>  
     <footer>
-        <p>Footer</p>
+        <p>Grupparbete, Webbdesign 2</p>
+        <p>Grupp nr 6</p>
+        <p>Natalie Lindberg & Ida Karlsson</p>
     </footer>
     <script src="style.js"></script>
 </body>

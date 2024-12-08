@@ -27,15 +27,15 @@ main {
 
 /* Flexbox-container */
 .container {
-    display: flex;    
-    height: calc(100vh - 20vh); /* Full höjd minus header */     
+    display: flex;
+    flex-direction: column; /* Standardlayout för små skärmar */
+    height: auto; /* Anpassas efter innehållet */
 }
 
 /* Vänster container (sidomeny) */
 #leftContainer {
     background-color: #C7962D;
-    width: 13.3%;
-    font-family: Helvetica, sans-serif;
+    width: 100%; /* Tar upp hela bredden på små skärmar */
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
@@ -43,13 +43,19 @@ main {
 
 /* Logo */
 #logo img {
-    width: 200px;
-    height: 200px;   
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #474048;
 }
 
 /* Timer-container */
 #timerContainer {
     background-color: #C7962D;
+    border: 2px solid #474048;
+}
+
+#timer {
+    font-family: orbitron;
 }
 
 #startBtn, #stopBtn, #resetBtn {
@@ -65,29 +71,26 @@ main {
 
 /* Tasks-container */
 #tasksContainer {
-    flex-grow: 1; /* Tar upp all återstående plats */
-    display: flex; /* Gör container till en flexbox */
-    gap: 20px; /* Mellanrum mellan listorna */
-    flex-wrap: wrap; /* Tillåt radbrytning om det inte får plats horisontellt */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
-    
     box-sizing: border-box;
 }
 
 /* Styling för individuella listor */
 .task-list {
     background-color: #F6988C;
-    width: 22%; /* Bredd på varje lista */
-    height: 70%; /* Höjd på varje lista */
+    width: 100%; /* Anpassning för små skärmar */
     padding: 10px;
-    box-sizing: border-box; /* Inkludera padding i bredd/höjd */
+    box-sizing: border-box;
     border: 1px solid #C7962D;
     text-align: center;
 }
 
 /* Listan med uppgifter */
 .task-items {
-    list-style-type: none; /* Ta bort standard-prickar */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
@@ -103,7 +106,6 @@ main {
     color: gray;
 }
 
-
 /* H3 rubriker */
 h3 {
     text-align: center;
@@ -115,4 +117,24 @@ footer {
     text-align: center;
     margin: 0;
     padding: 1rem;
+    color: #FEF7DB;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Byter till radlayout på större skärmar */
+    }
+
+    #leftContainer {
+        width: 20%; /* Sidomenyn får en fast bredd */
+    }
+
+    #tasksContainer {
+        flex-grow: 1; /* Tar upp resterande utrymme */
+    }
+
+    .task-list {
+        width: 22%; /* Listorna blir bredare */
+    }
 }
