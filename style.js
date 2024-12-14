@@ -84,3 +84,22 @@ $(document).ready(function () {
         }
     });
 });
+
+function randomizeTask() {
+    // Hämtar alla uppgifterna från listan
+    const task = $('#taskList .task-item').toArray();
+
+    if (task.length > 0) {
+        // Väljer en slumpmässigt uppgfit från listan
+        const randomTask = task[Math.floor(Math.random() * task.length)];
+        // Visar uppgiften
+        alert(`Random task: ${$(randomTask).text()}`);
+    } else {
+        alert('There are no available task to randomize!');
+    }
+
+}
+    $('#overwhelmed').click(function () {
+        randomizeTask();
+    });
+
