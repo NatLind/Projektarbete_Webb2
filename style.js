@@ -86,20 +86,20 @@ $(document).ready(function () {
 });
 
 function randomizeTask() {
-    // Hämtar alla uppgifterna från listan
+    // Hämtar alla uppgifterna från listan taskList
     const task = $('#taskList .task-item').toArray();
-
+    // kollar ifall det finns några uppgifter i listan
     if (task.length > 0) {
-        // Väljer en slumpmässigt uppgfit från listan
+        // Väljer en slumpmässigt uppgift från listan
         const randomTask = task[Math.floor(Math.random() * task.length)];
-        // Visar uppgiften
+        // Visar den slumpmässigt valda uppgiften
         alert(`Random task: ${$(randomTask).text()}`);
-    } else {
+    } else {    //visar alert om listan är tom
         alert('There are no available task to randomize!');
     }
 
-}
+}    // kopplar en "klickhändelse" till knappen med ID "overwhelmed"
     $('#overwhelmed').click(function () {
-        randomizeTask();
+        randomizeTask(); //anropar funktionen
     });
 
